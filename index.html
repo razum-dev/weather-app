@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Weather App</h1>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Введите город..." class="search-input">
+                <button id="search-btn" class="search-btn">Поиск</button>
+            </div>
+        </header>
+        
+        <main class="main">
+            <!-- Скелетон-загрузка -->
+            <div class="skeleton-loading" id="skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-line skeleton-title"></div>
+                    <div class="skeleton-line skeleton-temp"></div>
+                    <div class="skeleton-line skeleton-desc"></div>
+                    <div class="skeleton-details">
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Текущая погода -->
+            <section class="current-weather" id="current-weather">
+                <div class="weather-card">
+                    <h2 class="city-name" id="city-name">Москва</h2>
+                    <div class="weather-main">
+                        <img src="" alt="Погода" class="weather-icon" id="weather-icon">
+                        <div class="temperature" id="temperature">25°C</div>
+                    </div>
+                    <div class="weather-description" id="weather-desc">Солнечно</div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span>💧 Влажность:</span>
+                            <span id="humidity">65%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>💨 Ветер:</span>
+                            <span id="wind">5 м/с</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>🌡️ Ощущается:</span>
+                            <span id="feels-like">27°C</span>
+                        </div>
+                    </div>
+
+                    <!-- Восход/закат -->
+                    <div class="sun-moon-info">
+                        <div class="astro-item">
+                            <span>🌅 Восход:</span>
+                            <span id="sunrise">--:--</span>
+                        </div>
+                        <div class="astro-item">
+                            <span>🌇 Закат:</span>
+                            <span id="sunset">--:--</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Прогноз на 5 дней -->
+            <section class="forecast" id="forecast">
+                <h3>Прогноз на 5 дней</h3>
+                <div class="forecast-cards" id="forecast-cards">
+                    <!-- Прогноз будет здесь -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
